@@ -19,5 +19,4 @@
         require('end_connection.php');
     ?>
 </body>
-
 </html>

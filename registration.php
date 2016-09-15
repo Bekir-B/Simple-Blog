@@ -40,3 +40,7 @@ if ( isset($_POST['submit'])) {
     </ul>
 
 </form>
+
+<?php 
+    header('Location: users.php');
+    ?>
