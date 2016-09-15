@@ -15,12 +15,13 @@ $sql = "SELECT * FROM users WHERE Password='$password' AND Username='$username'"
 $result = mysqli_query($conn,$sql);
 $count = mysqli_num_rows($result);
 
-if($count == 1){
-    $_SESSION['login_user'] = $username;
-    header('Location: users.php');
+if($count != 1){
+   echo "Wrong username or password!";
 }
 else {
-    $error = "Username or Password is invalid";
+    $_SESSION['login_user'] = $username;
+    header('Location: homepage.html');
+    
 }
  
     
