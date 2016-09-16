@@ -14,8 +14,6 @@ if ( isset($_POST['submit'])) {
         $count = mysqli_num_rows($result);
 
 
-        if (mysqli_num_rows($result) > 0)
-
         if(count(array_filter($_POST))!=count($_POST)){
             echo "You didn't fill all the fields!";
                 }
@@ -26,15 +24,15 @@ if ( isset($_POST['submit'])) {
 
         elseif ($Password==$Password2){
         $conn->query("INSERT INTO users (Username, Password, Name, Surname, Email) VALUES('$Username', '$Password', '$Name', '$Surname', '$Email')", 1);
-        header('Location: users.php');
+        header('Location: login.php');
         }
 
         else {
            echo "Passwords must match!";
         }
-        require ('end_connection.php');
-    
+        
 }
+require ('end_connection.php');
 ?>
 <form action="" method="post">
     <ul>
