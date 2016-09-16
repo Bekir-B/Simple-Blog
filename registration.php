@@ -26,7 +26,7 @@ if ( isset($_POST['submit'])) {
 
         elseif ($Password==$Password2){
         $conn->query("INSERT INTO users (Username, Password, Name, Surname, Email) VALUES('$Username', '$Password', '$Name', '$Surname', '$Email')", 1);
-        header('Location: users.php');
+        header('Location: login.php');
         }
 
         else {
