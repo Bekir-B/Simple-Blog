@@ -9,7 +9,7 @@ else
     $username=$_POST['username'];
     $password=$_POST['password'];
 
-include ('db_connect.php');
+include ('db_services/db_connect.php');
 
 $sql = "SELECT * FROM users WHERE Password='$password' AND Username='$username'";
 $result = mysqli_query($conn,$sql);
@@ -24,7 +24,7 @@ else {
     header('Location: homepage.php');
     
 }    
-require ('end_connection.php');
+require ('db_services/end_connection.php');
 }}
  ?>
 

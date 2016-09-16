@@ -1,7 +1,8 @@
 <?php
     
     session_start();
-    include('db_connect.php');
+    include('db_services/db_connect.php');
+    
     echo "This is the homepage"."<br>";
      if(isset($_SESSION['login_user'])){
          echo "Welcome " .$_SESSION['login_user']."<br>";
@@ -9,8 +10,7 @@
      }
  
      elseif(!isset($_SESSION['login_user'])){
-         echo "<a href=\"registration.php\">Register here</a>"."<br>"; 
-         echo "<a href=\"login.php\">Login here</a>";
+         include('includes/header.html');
      }
      if ( isset($_POST['submit'])){
          header('Location: logout.php');
@@ -18,3 +18,15 @@
      }
     
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+</body>
+</html>

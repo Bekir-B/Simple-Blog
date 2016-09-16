@@ -1,7 +1,7 @@
 <html>
 <body>
     <?php
-        include ('db_connect.php');
+        include ('db_services/db_connect.php');
          
         
         $sql = "SELECT * FROM users";
@@ -18,7 +18,7 @@
                 else {
                     echo "0 results";
                 }
-        require('end_connection.php');
+        require('db_services/end_connection.php');
     ?>
 </body>
 </html>

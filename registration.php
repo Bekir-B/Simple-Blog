@@ -1,7 +1,7 @@
 
 <?php 
 if ( isset($_POST['submit'])) {
-    include('db_connect.php');
+    include('db_services/db_connect.php');
         $Username=$_POST['username'];
         $Password=$_POST['password'];
         $Password2=$_POST['password2'];
@@ -32,7 +32,7 @@ if ( isset($_POST['submit'])) {
         }
         
 }
-require ('end_connection.php');
+require ('db_services/end_connection.php');
 ?>
 <form action="" method="post">
     <ul>
