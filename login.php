@@ -4,7 +4,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")  {
    if (empty($_POST['username']) || empty($_POST['password'])) {
 $error = "Username or Password is invalid";
 }
-else
+else 
 {
     $username=$_POST['username'];
     $password=$_POST['password'];

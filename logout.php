@@ -6,6 +6,6 @@
     header('Location: homepage.php');
 
     header('Location: login.php');
-
+ 
 ?>
 

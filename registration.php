@@ -26,7 +26,7 @@ if ( isset($_POST['submit'])) {
         $conn->query("INSERT INTO users (Username, Password, Name, Surname, Email) VALUES('$Username', '$Password', '$Name', '$Surname', '$Email')", 1);
         header('Location: login.php');
         }
-
+ 
         else {
            echo "Passwords must match!";
         }
