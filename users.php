@@ -4,14 +4,14 @@
         include ('db_services/db_connect.php');
          
         
-        $sql = "SELECT * FROM users";
+        $sql = "SELECT * FROM posts";
         $result = mysqli_query($conn, $sql);
 
         if (mysqli_num_rows($result) > 0) {
             while ($row = mysqli_fetch_assoc($result)) {
 
 
-                echo "ID: " .$row["UserID"]. " Name: " .$row["Name"]. " " .$row["Surname"]. " Username: ".$row['Username']. " Date Joined: " .$row["DateJoined"]. " E-mail: " .$row["Email"]. "<br>" ;
+                echo "ID: " .$row["PostID"]. " Title: " .$row["Title"]. "Content:  " .$row["Content"].  " Date Posted: " .$row["DatePosted"]. " UserID: " .$row["UserID"]. "<br>" ;
 
             }
         }

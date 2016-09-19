@@ -6,14 +6,10 @@
     
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Simple Blog</title>
+<!--###########################################################-->
     
-</head>
-<body>
-    
-</body>
-</html>
+<div class="container">
+    <div id="post">
+        
+    </div>
+</div>

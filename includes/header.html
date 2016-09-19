@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="layout/header.css" type="text/css" />
-    <title>	</title>
+    <title> </title>
 </head>
 
 <body id="top">
@@ -11,25 +12,27 @@
         <div id="topline">
             <div id="logo">
                 <a href="homepage.php">Simple Blog</a>
-                </div>
+            </div>
             <ul>
-            <?php 
+                <?php 
            
             if (isset($_SESSION['login_user'])) {
             include('db_services/db_connect.php');
             echo '<li class="last">'.$_SESSION['login_user'].'</li>';
-            echo '<li class="last"><a href="logout.php"> Logout</a></li>';
+            echo '<li class="last"><a href="posts.php">Create a post</a>';
+            echo '<li class="last"><a href="logout.php">Logout</a></li>';
             } else {
             echo '<li><a href="./registration.php">Register</a></li>
             <li class="last"><a href="login.php">Login</a></li>';
             }
             ?>
 
-        </ul>
-            
-            
+            </ul>
+
+
         </div>
-     </div>
-    
+    </div>
+
 </body>
+
 </html>

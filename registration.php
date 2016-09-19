@@ -1,8 +1,11 @@
 
 <?php 
 session_start();
+
+include('includes/header.html'); 
 if ( isset($_POST['submit'])) {
     include('db_services/db_connect.php');
+
         $Username=$_POST['username'];
         $Password=$_POST['password'];
         $Password2=$_POST['password2'];
@@ -36,6 +39,9 @@ if ( isset($_POST['submit'])) {
 }
 require ('db_services/end_connection.php');
 ?>
+
+<div class="container">
+    <div id="respond">
 <form action="" method="post">
     <ul>
         <li>
@@ -62,7 +68,9 @@ require ('db_services/end_connection.php');
             Email:<br>
             <input type="text" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>">
         </li>
-            <input type="submit" name ="submit" value="Register"> 
+            <li><input type="submit" name ="submit" value="Register"></li> 
     </ul>
 
 </form>
+</div>
+</div>
