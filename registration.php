@@ -1,5 +1,6 @@
 
 <?php 
+session_start();
 if ( isset($_POST['submit'])) {
     include('db_services/db_connect.php');
         $Username=$_POST['username'];
@@ -24,7 +25,8 @@ if ( isset($_POST['submit'])) {
 
         elseif ($Password==$Password2){
         $conn->query("INSERT INTO users (Username, Password, Name, Surname, Email) VALUES('$Username', '$Password', '$Name', '$Surname', '$Email')", 1);
-        header('Location: login.php');
+        $_SESSION['login_user'] = $Username;
+        header('Location: homepage.php');
         }
  
         else {
@@ -38,7 +40,7 @@ require ('db_services/end_connection.php');
     <ul>
         <li>
             Username:<br>
-            <input type="text" name="username">
+            <input type="text" name="username" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>">
         </li>
         <li>
             Password:<br>
@@ -50,15 +52,15 @@ require ('db_services/end_connection.php');
         </li>
         <li>
             Name:<br>
-            <input type="text" name="name">
+            <input type="text" name="name" value="<?php if (isset($_POST['name'])) echo $_POST['name']; ?>">
         </li>
         <li>
             Surname:<br>
-            <input type="text" name="surname">
+            <input type="text" name="surname" value="<?php if (isset($_POST['surname'])) echo $_POST['surname']; ?>">
         </li>
         <li>
             Email:<br>
-            <input type="text" name="email">
+            <input type="text" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>">
         </li>
             <input type="submit" name ="submit" value="Register"> 
     </ul>
