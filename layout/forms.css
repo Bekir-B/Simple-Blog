@@ -4,4 +4,4 @@
 .container #respond #submit, .container #respond #reset{margin:8px; width: 98%; 
 color:#666666; background-color:#F7F7F7; border:1px solid #CCCCCC; cursor:pointer;}
 .container #respond li{display:block; margin: 5px;}
-.container #respond form{width:50%; margin: 0 5%; font-size:30px; padding:2px;}
+.container #respond form{width:50%; margin: 0 5%; font-size:20px; padding:2px;}

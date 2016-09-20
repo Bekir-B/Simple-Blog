@@ -11,7 +11,7 @@
     <div class="wrapper col0">
         <div id="topline">
             <div id="logo">
-                <a href="homepage.php">Simple Blog</a>
+                <a href="homepage.php">Equinox</a>
             </div>
             <ul>
                 <?php 
@@ -19,7 +19,7 @@
             if (isset($_SESSION['login_user'])) {
             include('db_services/db_connect.php');
             echo '<li class="last">'.$_SESSION['login_user'].'</li>';
-            echo '<li class="last"><a href="posts.php">Create a post</a>';
+            echo '<li class="last"><a href="create_posts.php">Create a post</a>';
             echo '<li class="last"><a href="logout.php">Logout</a></li>';
             } else {
             echo '<li><a href="./registration.php">Register</a></li>
