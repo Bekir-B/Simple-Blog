@@ -36,7 +36,7 @@
                             echo $news_body;
                         echo '</div>';
                     
-                        echo '<a href="#" class="button">Continue Reading &rarr;</a>';
+                        echo '<a href="./post_item.php?PostID='.$row['PostID'].'" class="button">Continue Reading &rarr;</a>';
                         echo '<hr>';
                     echo '</div>';
                      echo'</div>';
