@@ -17,5 +17,12 @@
     echo'</div>';
 ?>
 
+<div id="respond">
+    <form action="" method="post">
+        <textarea name="content" cols="100%" rows="10"></textarea><br>
+         <input type="hidden" name="userID" value="" />
+        <input type="submit" name="submit" value="Submit comment" />
 
+    </form>
+    </div>
 </div>
