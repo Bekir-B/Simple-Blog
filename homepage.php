@@ -9,9 +9,21 @@
 <div class="wrapper">
         <?php
 
+
             $query = "SELECT posts.*, users.Username FROM posts LEFT JOIN users ON posts.UserID = users.UserID ORDER BY DatePosted DESC";
             $result = mysqli_query($conn,$query);
             $count = mysqli_num_rows($result);
+
+<!--###########################################################-->
+    
+<div class="wrapper col1">
+
+        <?php
+
+            $query = "SELECT * FROM posts ORDER BY DatePosted DESC LIMIT 5";
+            $result = mysqli_query($conn,$query);
+            $count = mysqli_num_rows($result);
+
             if($count > 0){
 
                 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
@@ -39,6 +51,23 @@
             }}
             
         ?>
+                    $stringCut = substr($news_body, 0, 170);
+                    // make sure it ends in a word so assassinate doesn't become ass...
+                    $news_body = substr($stringCut, 0, strrpos($stringCut, ' ')). '...';
+                }
+                    echo '<div class="post">';
+                    echo '<div id=title>';
+                    echo '<h2>' . $row['Title'] . '</h2>';
+                    echo '</div>';
+                    echo '<div id=body>';
+                    echo $news_body;
+                    echo '</div>';
+                    echo '<a href="#" class="button">Continue Reading &rarr;</a>';
+                    echo '</div>';
+            }
+            }
+        ?>
+
 </div>
 
 
