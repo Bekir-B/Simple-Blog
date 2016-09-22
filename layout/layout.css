@@ -1,0 +1,81 @@
+@import url("forms.css");
+
+body{
+    margin:0; 
+    padding:20; 
+    font-size:15px; 
+    font-family:Georgia, "Times New Roman", Times, serif; 
+    color:#666666; 
+    background-color:#FFFFFF;}
+
+/*WRAPPERS*/
+.wrapper{
+    display:inline-block; 
+    width:75%; 
+    text-align:left;
+    margin: 0 10% 0 13%;}
+
+.col0, .col0 a{
+    color:#c2c5b0; 
+    background-color:#3a3a3a;}
+.col1 {
+    width:70%;
+    display:block;
+    float:left;
+    }
+
+/*HEADER STYLE*/
+#topline{
+    padding:35px 25px;}
+
+#topline ul{
+    display:block; 
+    float:right; 
+    margin:0 12% 0 0; 
+    padding:0; 
+    list-style:none; 
+    overflow:hidden;}
+
+#topline li{
+    display:inline-block; 
+    margin:0 8px 0 0; 
+    padding:0 20px 10px 5px; 
+    border-right:1px solid #c2c5b0;}
+
+#topline li.last{
+    margin-right:10px; 
+    padding-right:10px; 
+    border:none;}
+
+#logo{
+    display:block; 
+    float:left; 
+    font-size: 25px; 
+    padding-bottom: 5px; 
+    margin:0 0 1% 12%; 
+    overflow:hidden;}
+
+#logo a{
+    text-decoration:none;}
+
+/*POST STYLE*/
+.post {
+    display: block; 
+    width:100%;}
+
+.post #title h2 {
+    color:#14978f; 
+    width:25%;}
+
+.post .button {
+    background-color: #14978f;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 8px 0;
+    cursor: pointer;}
+

@@ -6,10 +6,7 @@
     
 ?>
 
-<!--############Start of content div############-->
-    
-
-
+<div class="wrapper">
         <?php
 
             $query = "SELECT * FROM posts ORDER BY DatePosted DESC";
@@ -22,11 +19,11 @@
 
                     $news_body = strip_tags($row['Content']);
                     if (strlen($news_body) > 2000) {
-                    $stringCut = substr($news_body, 0, 170);
+                    $stringCut = substr($news_body, 0, 2000);
                     // make sure it ends in a word so assassinate doesn't become ass...
                     $news_body = substr($stringCut, 0, strrpos($stringCut, ' ')). '...';
                 }
-                echo '<div class="wrapper col1">';
+                echo '<div class="col1">';
                     echo '<div class="post">';
                         echo '<div id=title>';
                              echo '<h2>' . $row['Title'] . '</h2>';
@@ -44,7 +41,7 @@
             }}
             
         ?>
-
+</div>
 
 
 

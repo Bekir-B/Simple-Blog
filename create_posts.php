@@ -12,10 +12,16 @@
         $result2=mysqli_query($conn,$query2);
         $row = mysqli_fetch_assoc($result2);
         $UserID = implode ("",$row);
+        $count = mysqli_num_rows($result2);
 
+        if(count(array_filter($_POST))!=count($_POST)){
+            echo "You didn't fill all the fields!";
+        }
+
+        else{
         $query = "INSERT INTO posts (Title, Content, UserID) VALUES ('$Title','$Content','$UserID')";
         $result = mysqli_query($conn, $query);
-    }
+    }}
     }
 ?>
 
@@ -28,7 +34,7 @@
         <label for="post"><small>Write your post here</small></label><br>
         <textarea name="content" cols="100%" rows="10"></textarea><br>
          <input type="hidden" name="userID" value="<?php $result2?> " />
-        <input type="submit" name="submit" value="Submit post">
+        <input type="submit" name="submit" value="Submit post" />
 
     </form>
     </div>
