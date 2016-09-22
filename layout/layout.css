@@ -67,6 +67,16 @@ body{
     color:#14978f; 
     width:25%;}
 
+    .post #info{
+        padding: 0 0 2% 0;
+    }
+    .material-icons{
+        display:block;
+        padding: 0 0 2% 0;
+    }
+    .material-icons.md-18 { 
+        font-size: 18px; }
+
 .post .button {
     background-color: #14978f;
     border: none;
@@ -79,3 +89,14 @@ body{
     margin: 8px 0;
     cursor: pointer;}
 
+/*POST PAGE STYLE*/
+
+#item {
+    width:70%;
+    float:left;
+    display:block;
+}
+
+#item h1{
+    color:#14978f;
+}

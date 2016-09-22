@@ -13,22 +13,27 @@
     width:98%; 
     border:1px solid #CCCCCC; 
     padding:2px; 
-    overflow:auto;}
-
-.container #respond #submit, .container #respond #reset{
-    margin:8px; 
-    width: 98%; 
-    color:#14978f; 
-    background-color:#F7F7F7; 
-    border:1px solid #CCCCCC; 
-    cursor:pointer;}
+    overflow:auto;   }
 
 .container #respond li{
     display:block; 
-    margin: 5px;}
+    margin: 5px;
+    color:#14978f; }
 
 .container #respond form{
     width:50%; 
     margin: 0 5%; 
     font-size:20px; 
     padding:2px;}
+
+.container #respond input[type=submit]{
+      background-color:#14978f; 
+      cursor: pointer;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 8px 0;
+}

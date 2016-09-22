@@ -5,14 +5,13 @@
     include('includes/header.html');
     
 ?>
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <div class="wrapper">
         <?php
 
-            $query = "SELECT * FROM posts ORDER BY DatePosted DESC";
+            $query = "SELECT posts.*, users.Username FROM posts LEFT JOIN users ON posts.UserID = users.UserID ORDER BY DatePosted DESC";
             $result = mysqli_query($conn,$query);
             $count = mysqli_num_rows($result);
-
             if($count > 0){
 
                 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
@@ -28,11 +27,10 @@
                         echo '<div id=title>';
                              echo '<h2>' . $row['Title'] . '</h2>';
                         echo '</div>';
-                        
+                        echo'<div id="info"><i class="material-icons md-18">person </i> Username: ' .$row['Username'].'&nbsp <i class="material-icons md-18"> date_range</i> Date posted: '.$row['DatePosted'].'</div>';
                         echo '<div id=body>';
                             echo $news_body;
                         echo '</div>';
-                    
                         echo '<a href="./post_item.php?PostID='.$row['PostID'].'" class="button">Continue Reading &rarr;</a>';
                         echo '<hr>';
                     echo '</div>';

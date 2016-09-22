@@ -2,6 +2,7 @@
 session_start();
 include ('db_services/db_connect.php');
 include('includes/header.html');
+
 if($_SERVER["REQUEST_METHOD"] == "POST")  {
    if (empty($_POST['username']) || empty($_POST['password'])) {
 $error = "Username or Password is invalid";
@@ -35,14 +36,14 @@ require ('db_services/end_connection.php');
     <ul>
     <li>Username:<br>
     <input type="text" name="username" value="<?php if (isset($_POST['username'])) echo $_POST['username']; ?>"><br>
-    </l>
+    </li>
 
     <li>
     Password:<br>
     <input type="password" name="password"><br>
-    </l>
+    </li>
 
-    <li><input type="submit" name="submit" value="Login"></li>
+    <li><input id="button" type="submit" name="submit" value="Login"></li>
 </ul>
 </form>
 </div>
