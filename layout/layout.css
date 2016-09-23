@@ -108,3 +108,10 @@ body{
     float:left;
     display:block;
 }
+
+.commentlist{
+    width:70%;
+    float:left;
+    display:block;
+    padding:2% 0;
+}

@@ -19,12 +19,21 @@
 
 <?php
 
-    $query4 = "SELECT * FROM comments WHERE PostID ={$_REQUEST['PostID']}";
+    $query4 = "SELECT comments.*, users.Username FROM comments LEFT JOIN users ON comments.UserID = users.UserID WHERE PostID ={$_REQUEST['PostID']}";
     $result4 = mysqli_query ($conn, $query4);
+    $num = mysqli_num_rows($result4);
     echo '<div id="comments">';
     echo '<h2>Comments</h2>';
-    echo '<ul class="commentlist">';
+    while($num!=0){
+    $row4 = mysqli_fetch_array($result4, MYSQLI_ASSOC);
+    echo '<div class="commentlist">';
+    echo 'Username:'.$row4['Username'].'<br>';
+    echo $row4['Content'];
     echo'</div>';
+    $num--;
+     }
+    echo'</div>';
+   
 ?>
 
 
@@ -41,7 +50,7 @@
     </form>
     </div>
     </div>
-</div>
+
 
 <?php
       if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -58,8 +67,8 @@
                 
                 $query2="SELECT UserID FROM users WHERE Username = '{$_SESSION["login_user"]}'";
                 $result2=mysqli_query($conn,$query2);
-                $row = mysqli_fetch_assoc($result2);
-                $UID = implode ("",$row);
+                $row2 = mysqli_fetch_assoc($result2);
+                $UID = implode ("",$row2);
                 $PID = $_POST['PostID'];
 
                 $query3 = "INSERT INTO comments (Content, PostID, UserID) VALUES ('$content', '$PID', '$UID')"; 
@@ -68,3 +77,5 @@
             }
       }  }
 ?>
+
+</div>
