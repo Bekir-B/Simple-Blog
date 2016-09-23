@@ -30,7 +30,7 @@ else {
 require ('db_services/end_connection.php');
 }}
  ?>
-<div class="container">
+<div class="container log">
     <div id="respond">
 <form action="" method="post">
     <ul>

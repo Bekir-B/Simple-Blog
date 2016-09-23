@@ -50,9 +50,9 @@ body{
 #logo{
     display:block; 
     float:left; 
-    font-size: 25px; 
-    padding-bottom: 5px; 
-    margin:0 0 1% 12%; 
+    font-size: 25px;
+    padding-bottom: 5px;
+    margin:0 0 2% 12%; 
     overflow:hidden;}
 
 #logo a{
