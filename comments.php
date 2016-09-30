@@ -6,9 +6,7 @@
     if($action=="showcomment"){
         
         $query4 = "SELECT comments.*, users.Username FROM comments LEFT JOIN users ON comments.UserID = users.UserID WHERE PostID = {$_SESSION['PostID']}";
-        //var_dump ($query4);/*{$_REQUEST['PostID']}*/
         $result4 = mysqli_query ($conn, $query4);
-        //var_dump($result4);
         $num = mysqli_num_rows($result4);
             while($num!=0){
                 $row4 = mysqli_fetch_assoc($result4);

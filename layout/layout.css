@@ -87,7 +87,14 @@ body{
     display: inline-block;
     font-size: 16px;
     margin: 8px 0;
-    cursor: pointer;}
+    cursor: pointer;
+    }
+
+.post .likebtn {
+    padding: 2% 0 0 0;
+    cursor: pointer;
+    float: right;
+}
 
 /*POST PAGE STYLE*/
 
