@@ -109,6 +109,10 @@ body{
     display:block;
 }
 
+#comments li{
+    list-style-type: none;
+}
+
 .commentlist{
     width:70%;
     float:left;

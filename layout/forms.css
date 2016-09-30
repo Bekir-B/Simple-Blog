@@ -46,10 +46,10 @@
 
 #postwrap {
     float:left;
-    dispplay:block;
+    display:block;
 }
 
-#postwrap #respond input[type=submit]{
+#postwrap #respond input[type=button]{
       background-color:#14978f; 
       cursor: pointer;
       color: white;
