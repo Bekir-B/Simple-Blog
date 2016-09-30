@@ -38,6 +38,7 @@
       margin: 8px 0;
 }
 
+
 #postwrap #respond {
     float:left;
     display:block;
@@ -50,6 +51,7 @@
 }
 
 #postwrap #respond input[type=button]{
+
       background-color:#14978f; 
       cursor: pointer;
       color: white;

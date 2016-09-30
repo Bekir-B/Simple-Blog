@@ -63,7 +63,6 @@
     echo'</div>';
 ?>
 
-
 <div id="comments">
 <h2>Comments</h2>
 <ul id="commentslist">
